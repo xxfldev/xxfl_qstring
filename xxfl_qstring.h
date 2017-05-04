@@ -132,6 +132,8 @@ public:
     {
         clear();
 
+        _length = qstr._length;
+
         if (_length > 0)
         {
             _capacity = qstr._capacity;
