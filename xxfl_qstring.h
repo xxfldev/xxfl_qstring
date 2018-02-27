@@ -146,6 +146,7 @@ public:
         }
 
         return *this;
+
     }
 
     qstring& operator = (qstring&& qstr)
