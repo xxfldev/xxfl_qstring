@@ -1,4 +1,4 @@
-#include "test_helper.h"
+﻿#include "test_helper.h"
 
 std::mt19937 rand_gen;
 
@@ -71,7 +71,7 @@ void test_sort_performance()
 }
 
 template<typename _string>
-void string_test_set_insert_performance(uint32_t strings_count)
+void string_test_find_performance(uint32_t strings_count)
 {
     std::vector<_string> aa;
     std::set<_string> bb;
@@ -100,13 +100,13 @@ void test_find_performance()
     std::printf("find %u times in %u strings\n\n", strings_count, strings_count);
 
     std::printf("std::string: ");
-    string_test_set_insert_performance<std::string>(strings_count);
+    string_test_find_performance<std::string>(strings_count);
 
     std::printf("xxfl_qstring32: ");
-    string_test_set_insert_performance<xxfl_qstring32>(strings_count);
+    string_test_find_performance<xxfl_qstring32>(strings_count);
 
     std::printf("xxfl_qstring64: ");
-    string_test_set_insert_performance<xxfl_qstring64>(strings_count);
+    string_test_find_performance<xxfl_qstring64>(strings_count);
 
     std::printf("\n");
 }
